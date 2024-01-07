@@ -7,12 +7,12 @@ import Header from './components/Header.vue';
   <div id="app">
     <Header />
 
+    <!-- 화면 전환 -->
     <router-view v-slot="{ Component }">
       <transition name="slide">
         <component :is="Component" />
       </transition>
     </router-view>
-
     <!-- <router-view></router-view> -->
 
   </div>
@@ -20,23 +20,20 @@ import Header from './components/Header.vue';
 
 <script>
 export default {
-  watch: {
-    $route(to, from) {
-      const toDepth = to.path.split('/').length
-      const fromDepth = from.path.split('/').length
-      this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
-  console.log(toDepth, fromDepth);
-  console.log(to, from);
-    },
-  },
-
+  // watch: {
+  //   $route(to, from) {
+  //     const toDepth = to.path.split('/').length
+  //     const fromDepth = from.path.split('/').length
+  //     this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+  //   },
+  // },
 }
 </script>
 
 <style scoped>
 .slide-enter-active,
 .slide-leave-active {
-  transition: all 10s ease-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .slide-enter-to {
