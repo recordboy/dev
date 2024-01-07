@@ -1,6 +1,7 @@
 
 <script setup>
-import Header from './components/Header.vue';
+import Header from './components/common/Header.vue';
+import Footer from './components/common/Footer.vue';
 </script>
 
 <template>
@@ -13,8 +14,8 @@ import Header from './components/Header.vue';
         <component :is="Component" />
       </transition>
     </router-view>
-    <!-- <router-view></router-view> -->
 
+    <Footer />
   </div>
 </template>
 
@@ -31,11 +32,11 @@ export default {
 </script>
 
 <style scoped>
-.slide-enter-active,
-.slide-leave-active {
-  transition: all 0.5s ease-in-out;
-}
 
+/* 오른쪽에서 나타날 패널 */
+.slide-enter-active {
+  transition: all 100s ease-in-out;
+}
 .slide-enter-to {
   position: absolute;
   right: 0;
@@ -46,13 +47,18 @@ export default {
   right: -100%;
 }
 
+/* 왼쪽으로 사라질 패널 */
+.slide-leave-active {
+  transition: all 100s ease-in-out;
+}
 .slide-leave-to {
   position: absolute;
   left: -100%;
 }
-
 .slide-leave-from {
   position: absolute;
   left: 0;
 }
+
+
 </style>
