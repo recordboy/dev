@@ -1,14 +1,14 @@
 <template>
   <main class="con-wrap">
 
-    두번째
+    사용자 정보
 
   </main>
 </template>
 
 <script>
 export default {
-  name: 'dev-front',
+  name: 'dev-user-info',
 }
 </script>
 

@@ -1,7 +1,6 @@
 <template>
   <main class="con-wrap">
-
-    첫번째
+    프론트
   </main>
 </template>
 
