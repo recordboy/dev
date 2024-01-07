@@ -15,8 +15,10 @@ export default {
 <style scoped>
 .header-wrap {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 20px;
+  left: 50%;
+  z-index: 1;
+  background-color: #fff;
 }
 
 

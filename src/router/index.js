@@ -5,6 +5,13 @@ import Front from "../pages/Front";
 import UserInfo from "../pages/UserInfo";
 
 // 라우터 설계
+
+
+// const routes = [
+//   { path: "/1", component: Front },
+//   { path: "/2", component: UserInfo },
+// ];
+
 const routes = [
   {
     path: "/",
@@ -17,11 +24,6 @@ const routes = [
     meta: { transition: "slide-right" },
   },
 ];
-
-// const routes = [
-//   { path: "/1", component: Front },
-//   { path: "/2", component: UserInfo },
-// ];
 
 // 라우터 생성
 const router = createRouter({

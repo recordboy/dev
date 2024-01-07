@@ -1,21 +1,34 @@
 <script>
 export default {
-  name: 'dev-text-input',
-  props: ['id', 'title'],
+  name: 'dev-radio',
+  props: ['id', 'name', 'title'],
   setup(props) {
-    console.log('text-input: ', props);
+    console.log('Radio:', props);
   }
 }
 </script>
 
 <template>
-  <div class="text-input">
+  <div class="radio-wrap">
     <label :for="this.id">{{this.title}}</label>
-    <input :id="this.id" type="text" :placeholder="this.title + '을 입력하세요'" />
+    <input :id="this.id" :name="this.name" type="radio" />
   </div>
 </template>
 
+
 <style scoped>
+  .radio-wrap {
+    margin: 20px 0 0;
+  }
+
+
+
+
+</style>
+
+
+
+<!-- <style scoped>
 .text-input {
   margin: 20px 0 0;;
 }
@@ -44,4 +57,4 @@ export default {
   border: 2px solid #7f56da;
   outline: none;
 }
-</style>
+</style> -->
