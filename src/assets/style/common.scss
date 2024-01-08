@@ -6,7 +6,6 @@ body {
 
 #app {
     height: 100%;
-    overflow: hidden;
 }
 
 /* INPUT */
@@ -135,37 +134,68 @@ body {
         }
     }
 
-    /* 화면전환 */
-    /* 오른쪽에서 나타날 패널 */
-    &.slide-enter-active {
-        transition: all 0.5s ease-in-out;
+    /* 다음 패널(보여질 패널) */
+    &.next.slide-enter-active {
+        transition: all 5s ease-in-out;
     }
 
-    &.slide-enter-from {
+    &.next.slide-enter-from {
         position: absolute;
         right: -100%;
         opacity: 0;
     }
 
-    &.slide-enter-to {
+    &.next.slide-enter-to {
         position: absolute;
         right: 0;
         opacity: 1;
     }
 
-    /* 왼쪽으로 사라질 패널 */
-    &.slide-leave-active {
-        transition: all 0.5s ease-in-out;
+    /* 다음 패널(사라질 패널) */
+    &.next.slide-leave-active {
+        transition: all 5s ease-in-out;
     }
 
-    &.slide-leave-from {
+    &.next.slide-leave-from {
         position: absolute;
         left: 0;
     }
 
-    &.slide-leave-to {
+    &.next.slide-leave-to {
         position: absolute;
         left: -100%;
+        opacity: 0;
+    }
+
+    /* 이전 패널(보여질 패널) */
+    &.prev.slide-enter-active {
+        transition: all 5s ease-in-out;
+    }
+    &.prev.slide-enter-from {
+        position: absolute;
+        left: -100%;
+        opacity: 0;
+    }
+
+    &.prev.slide-enter-to {
+        position: absolute;
+        left: 0;
+        opacity: 1;
+    }
+
+    /* 이전 패널(사라질 패널) */
+    &.prev.slide-leave-active {
+        transition: all 5s ease-in-out;
+    }
+
+    &.prev.slide-leave-from {
+        position: absolute;
+        right: 0;
+    }
+
+    &.prev.slide-leave-to {
+        position: absolute;
+        right: 100%;
         opacity: 0;
     }
 }
@@ -182,6 +212,19 @@ body {
         line-height: 60px;
         font-size: 20px;
         font-weight: bold;
+    }
+    .header-back-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: none;
+        padding: 0;
+        width: 60px;
+        height: 60px;;
+        font-size: 20px;
+        background: none;
+        cursor: pointer;
+
     }
 }
 

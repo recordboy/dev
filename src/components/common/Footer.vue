@@ -13,9 +13,7 @@ export default {
 
 /* 다음 화면 전환 */
 function basicBtnClick() {
-
-  
-  ViewModule.nextPage('user-info');
+  ViewModule.nextPage();
 }
 
 </script>
@@ -23,7 +21,7 @@ function basicBtnClick() {
 <template>
   <footer class="footer-wrap">
     <div class="footer-inner">
-      <BasicBtn @click="basicBtnClick" />
+      <BasicBtn name="NEXT" @click="basicBtnClick" />
     </div>
   </footer>
 </template>

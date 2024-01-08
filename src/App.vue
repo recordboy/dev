@@ -2,6 +2,8 @@
 <script setup>
 import Header from './components/common/Header.vue';
 import Footer from './components/common/Footer.vue';
+import { ViewModule } from '../src/module/ViewModule.js'
+import { router } from './router/index.js';
 </script>
 
 <script>
@@ -15,6 +17,7 @@ export default {
   mounted() {
     showOn = true;
     console.log('슬라이드 전환 시작: ', showOn);
+    router.push({ path: 'front' });
   }
   // watch: {
   //   $route(to, from) {
@@ -37,7 +40,7 @@ export default {
     <!-- 화면 전환 -->
     <router-view v-slot="{ Component }">
       <transition v-if="showOn" name="slide">
-        <component :is="Component" />
+        <component :is="Component" :class="ViewModule.pageState === 'next' ? 'next' : 'prev'" />
       </transition>
       <transition v-else>
         <component :is="Component" />
