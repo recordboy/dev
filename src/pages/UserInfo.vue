@@ -1,6 +1,25 @@
 <script setup>
 import TextInput from '../components/input/TextInput.vue';
-import Radio from '../components/input/Radio.vue';
+import RadioBox from '../components/input/RadioBox.vue';
+// import Radio from '../components/input/Radio.vue';
+</script>
+
+<script>
+const radioLit = [
+  {
+    'id': '01',
+    'gender': 'm',
+    'title': '남자',
+    'checked': true
+  },
+  {
+    'id': '02',
+    'gender': 'f',
+    'title': '여자',
+    'checked': false
+  }
+]
+
 </script>
 
 <template>
@@ -9,33 +28,16 @@ import Radio from '../components/input/Radio.vue';
       <h1 class="title">
         사용자 정보를 입력해 주세요
       </h1>
-
     </div>
     <TextInput id="text-input-01" title="이름" />
     <TextInput id="text-input-02" title="생년월일" />
+    
+    <RadioBox :radioLit="radioLit" name="radio-01" title="성별" />
 
-    <Radio id="radio-01-01" name="성별" title="남자" />
-    <Radio id="radio-01-02" name="성별" title="여자" />
+    <!-- <div class="radio-wrap">
+      <Radio id="radio-02-01" name="radio-02" title="남자" value="m" checked="checked" />
+      <Radio id="radio-02-02" name="radio-02" title="여자" value="f" />
+    </div> -->
+
   </main>
 </template>
-
-<script>
-export default {
-  name: 'dev-user-info',
-}
-
-</script>
-<style scoped>
-.con-wrap {
-  box-sizing: border-box;
-  padding: 20px 20px;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-}
-.con-wrap .visual h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-</style>
