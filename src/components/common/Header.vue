@@ -6,24 +6,29 @@ import { ViewModule } from '../../module/ViewModule.js';
 export default {
   name: 'dev-header',
   mounted() {
-
     // if (ViewModule.pageIdx === 0) {
-
     // }
+  },
+  data() {
+    return {
+      idx: 0
+    }
 
-  }
-}
-
-/* 이전 화면 전환 */
-function headerBackBtnClick() {
-  ViewModule.prevPage();
+  },
+  methods: {
+    headerBackBtnClick() {
+      ViewModule.prevPage();
+      this.idx = ViewModule.pageIdx;
+    }
+    
+  },
 }
 
 </script>
 
 <template>
   <header class="header-wrap">
-    <h1 class="header-title">정보 입력</h1>
+    <h1 class="header-title">정보 입력{{this.idx}}</h1>
     <button 
       type="button" 
       class="header-back-btn" 
