@@ -136,7 +136,7 @@ body {
 
     /* 다음 패널(보여질 패널) */
     &.next.slide-enter-active {
-        transition: all 5s ease-in-out;
+        transition: all 0.5s ease-in-out;
     }
 
     &.next.slide-enter-from {
@@ -153,7 +153,7 @@ body {
 
     /* 다음 패널(사라질 패널) */
     &.next.slide-leave-active {
-        transition: all 5s ease-in-out;
+        transition: all 0.5s ease-in-out;
     }
 
     &.next.slide-leave-from {
@@ -163,13 +163,13 @@ body {
 
     &.next.slide-leave-to {
         position: absolute;
-        left: -100%;
+        left: 100%;
         opacity: 0;
     }
 
     /* 이전 패널(보여질 패널) */
     &.prev.slide-enter-active {
-        transition: all 5s ease-in-out;
+        transition: all 0.5s ease-in-out;
     }
     &.prev.slide-enter-from {
         position: absolute;
@@ -185,7 +185,7 @@ body {
 
     /* 이전 패널(사라질 패널) */
     &.prev.slide-leave-active {
-        transition: all 5s ease-in-out;
+        transition: all 0.5s ease-in-out;
     }
 
     &.prev.slide-leave-from {
