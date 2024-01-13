@@ -9,7 +9,7 @@ export default {
   <main class="con-wrap">
     <div class="visual">
       <h1 class="title">
-        시작
+        테스트 시작
       </h1>
     </div>
   </main>
