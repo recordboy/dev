@@ -60,6 +60,12 @@ const ViewModule = {
             }
         });
     },
+    
+    /** 페이지 이름 구하기 */
+    getPageName: function() {
+        return this.pageData[ViewModule.pageIdx].name;
+
+    },
 }
 
 /** LOCAL FUNCTION */
@@ -69,7 +75,6 @@ function chechPageState() {
     } else {
         ViewModule.pageState = 'prev';
     }
-    console.log(ViewModule.pageState);
 }
 
 export {

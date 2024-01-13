@@ -8,6 +8,7 @@ import { router } from './router/index.js';
 
 <script>
 
+
 // 슬라이드 전환 구분
 let showOn = false;
 
@@ -18,7 +19,21 @@ export default {
     showOn = true;
     console.log('슬라이드 전환 시작: ', showOn);
     router.push({ path: 'front' });
+  },
+  methods: {
+    handlePageIdxUpdate() {
+
+      // 현재 페이지 업데이트
+      this.pageName = ViewModule.getPageName();
+    },
+  },
+  data() {
+    return {
+      pageName: ViewModule.getPageName()
+    }
   }
+
+
   // watch: {
   //   $route(to, from) {
   //     const toDepth = to.path.split('/').length
@@ -35,7 +50,7 @@ export default {
 
 <template>
   <div id="app">
-    <Header />
+    <Header @update="handlePageIdxUpdate" :title="pageName"  />
 
     <!-- 화면 전환 -->
     <router-view v-slot="{ Component }">
@@ -47,6 +62,6 @@ export default {
       </transition>
     </router-view>
 
-    <Footer />
+    <Footer @update="handlePageIdxUpdate" />
   </div>
 </template>
