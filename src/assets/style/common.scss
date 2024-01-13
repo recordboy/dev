@@ -223,8 +223,11 @@ body {
         height: 60px;;
         font-size: 20px;
         background: none;
+        color: #000;
         cursor: pointer;
-
+        &.none {
+            display: none;
+        }
     }
 }
 

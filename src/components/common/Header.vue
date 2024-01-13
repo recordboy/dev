@@ -9,8 +9,6 @@ export default {
   name: 'dev-header',
   props: ['title'],
   mounted() {
-    // if (ViewModule.pageIdx === 0) {
-    // }
   },
   methods: {
     headerBackBtnClick() {
@@ -30,9 +28,10 @@ export default {
 <template>
   <header class="header-wrap">
     <h1 class="header-title">{{title}}</h1>
+
     <button 
-      type="button" 
-      class="header-back-btn" 
+      type="button"
+      :class="ViewModule.pageIdx ? 'header-back-btn' : 'header-back-btn none'" 
       @click="headerBackBtnClick">
       &lt;
     </button>
