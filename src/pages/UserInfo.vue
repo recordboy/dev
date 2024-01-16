@@ -1,24 +1,24 @@
 <script setup>
 import TextInput from '../components/input/TextInput.vue';
-import RadioBox from '../components/input/RadioBox.vue';
+// import RadioBox from '../components/input/RadioBox.vue';
 // import Radio from '../components/input/Radio.vue';
 </script>
 
 <script>
-const radioLit = [
-  {
-    'id': '01',
-    'gender': 'm',
-    'title': '남자',
-    'checked': true
-  },
-  {
-    'id': '02',
-    'gender': 'f',
-    'title': '여자',
-    'checked': false
-  }
-]
+// const radioLit = [
+//   {
+//     'id': '01',
+//     'gender': 'm',
+//     'title': '남자',
+//     'checked': true
+//   },
+//   {
+//     'id': '02',
+//     'gender': 'f',
+//     'title': '여자',
+//     'checked': false
+//   }
+// ]
 
 </script>
 
@@ -29,10 +29,10 @@ const radioLit = [
         사용자 정보를 입력해 주세요
       </h1>
     </div>
-    <TextInput id="text-input-01" title="이름" />
-    <TextInput id="text-input-02" title="생년월일" />
+    <TextInput id="text-input-01" title="이름" focus="start01" />
+    <!-- <TextInput id="text-input-02" title="생년월일" focus="start02" /> -->
     
-    <RadioBox :radioLit="radioLit" name="radio-01" title="성별" />
+    <!-- <RadioBox :radioLit="radioLit" name="radio-01" title="성별" /> -->
 
     <!-- <div class="radio-wrap">
       <Radio id="radio-02-01" name="radio-02" title="남자" value="m" checked="checked" />
