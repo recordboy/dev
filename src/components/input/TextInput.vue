@@ -11,12 +11,10 @@ export default {
     // var a = this.focus;
     // console.log(a)
 
-    // // TODO 테스트
     setTimeout(() => {
       this.$refs.start01.focus();
     }, 500);
 
-    // // TODO 테스트
     // setTimeout(() => {
     //   this.$refs.start01.focus();
     // }, 500);
