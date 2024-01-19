@@ -10,6 +10,7 @@ body {
 
 /* INPUT */
 .text-input {
+    overflow: hidden;
     margin: 20px 0 0;
 
     &>label {
@@ -31,6 +32,16 @@ body {
         background: none;
         transition: border 0.2s ease-in-out;
         cursor: pointer;
+        transform: scale(1, 0);
+        transition: transform 0.2s ;
+    
+        &:focus {
+        }
+
+        &:focus {
+            transform: scale(1, 1);
+            color: red;
+        }
     }
 
     &>input[type="text"]::placeholder {

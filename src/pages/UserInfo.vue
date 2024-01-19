@@ -20,6 +20,11 @@ import TextInput from '../components/input/TextInput.vue';
 //   }
 // ]
 
+let option = {
+  focus: 'start01',
+  motion: 0.2
+}
+
 </script>
 
 <template>
@@ -29,7 +34,7 @@ import TextInput from '../components/input/TextInput.vue';
         사용자 정보를 입력해 주세요
       </h1>
     </div>
-    <TextInput id="text-input-01" title="이름" focus="start01" />
+    <TextInput id="text-input-01" title="이름" :option="option" />
     <!-- <TextInput id="text-input-02" title="생년월일" focus="start02" /> -->
     
     <!-- <RadioBox :radioLit="radioLit" name="radio-01" title="성별" /> -->
