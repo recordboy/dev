@@ -22,7 +22,7 @@ import TextInput from '../components/input/TextInput.vue';
 
 let option = {
   focus: 'start01',
-  motion: 0.2
+  motion: 500,
 }
 
 </script>
