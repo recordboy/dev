@@ -5,23 +5,31 @@ import TextInput from '../components/input/TextInput.vue';
 </script>
 
 <script>
-// const radioLit = [
-//   {
-//     'id': '01',
-//     'gender': 'm',
-//     'title': '남자',
-//     'checked': true
-//   },
-//   {
-//     'id': '02',
-//     'gender': 'f',
-//     'title': '여자',
-//     'checked': false
-//   }
-// ]
+export default {
+  name: 'dev-uset-info',
+  methods: {
+
+
+    
+    func(keyCode) {
+
+      if (keyCode === 13) {
+
+        idx++;
+        // console.log(idx)
+
+        
+      }
+
+    }
+  }
+}
+
+
+let idx = 0;
 
 let option = {
-  focus: 'start01',
+  focus: '01',
   motion: 500,
 }
 
@@ -34,7 +42,8 @@ let option = {
         사용자 정보를 입력해 주세요
       </h1>
     </div>
-    <TextInput id="text-input-01" title="이름" :option="option" />
+    <TextInput id="text-input-01" title="이름" :option="option" :func="func" :idx="idx" />
+    <TextInput id="text-input-02" title="이름2" :option="option" :idx="idx" />
     <!-- <TextInput id="text-input-02" title="생년월일" focus="start02" /> -->
     
     <!-- <RadioBox :radioLit="radioLit" name="radio-01" title="성별" /> -->

@@ -32,11 +32,11 @@ body {
         background: none;
         transition: border 0.2s ease-in-out;
         cursor: pointer;
-        transform: scale(1, 0);
-        transition: transform 0.2s;
-        &:focus {
-            transform: scale(1, 1);
-        }
+        // transform: scale(1, 0);
+        // transition: transform 0.2s;
+        // &:focus {
+        //     transform: scale(1, 1);
+        // }
     }
 
     &>input[type="text"]::placeholder {
